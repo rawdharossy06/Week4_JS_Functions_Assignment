@@ -18,13 +18,17 @@ Output: "The late fee is $2.50."
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
 
-
-
+function calculateLateFee(days) {
+   console.log('The late fee is $${days*0.25}')
+}
+calculateLateFee(10)
 // Extra Task:
 // - Convert the function into a function expression.
 
-
-
+function sum(num1,num2) {
+  console.log(num1+num2) 
+}
+sum(10,2.50)
 /*
 Task 2 : Favorite Color Finder 🚀🚀🚀🚀
 
@@ -44,13 +48,15 @@ Output: "Red: You are passionate and bold."
 */
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
-
-
-
 // Extra Task:
 // - Rewrite the function using an arrow function.
-
-
+function findColorMeaning(...args: [color: any]) {
+   console.log(color === "blue" ? "blue: you love calm and peace. bold." :
+      color === "red" ? "red: you are passiontion and bold." : "that's a unique choice!")
+   color === "green" ? "green: you are connected to nature." : "that's a unique choice!"
+   color === "yellow" ? "yellow: you radiate happiness and energy." : "that's a unique choice!"
+}
+findColorMeaning("red")
 
 /*
 Task 3 : Lawyer's Case Log 🚀🚀🚀🚀
@@ -67,12 +73,17 @@ Output: "Case #12345: John Doe's case is now logged."
 */
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
-
-
+function logCase(clientName,caseNumber){
+   console.log('case #${caseNumber}: ${clientName}'s case is now logged.')
+}
+logCase("John Doe", 12345)
 
 // Extra Task:
 // - Rewrite the function as an arrow function.
-
+function logCase(clientName,caseNumber){
+   console.log('case #${caseNumber}: ${clientName}'s case is now logged.')
+}
+logCase("John Doe", 12345)
 
 /*
 Task 4 : Attendance Tracker 🚀🚀🚀🚀
@@ -93,13 +104,17 @@ Output: "Amina is present."
 */
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
-
-
+ function markAttendance(studentName,isPresent){
+   console.log('${studentName} is ${isPresent?"present":"absent"}.')
+ }
+ markAttendance("Amina", true)
 
 // Extra Task:
 // - Convert the function into a function expression.
-
-
+function markAttendance(studentName,isPresent){
+   console.log('${studentName} is ${isPresent?"present":"absent"}.')
+ }  
+markAttendance("Amina", true)
 
 /*
 STRETCH TASK: Student Grade Report Generator 🏈🏈🏈🏈
@@ -135,3 +150,17 @@ Extra Credit:
 - Extend the program to accept multiple students' names and scores and generate a report for each student using a loop.
 - Use an arrow function for at least one of the functions.
 */
+function calculateAverage(score1,score2,score3){
+   return ( score1+score2+score3)/3
+}
+function determineGrade(average){
+   if(average>=90){
+      return "A"
+   }else if(average>=80){
+      return "B"
+   }else if(average>=70){
+      return "C"
+   }else{average<70
+      return "F"
+   }
+}
